@@ -1,0 +1,76 @@
+#Data int
+a = 3
+print(type(a))
+
+#data float
+a=3,5
+print(type(a))
+
+#data string
+nama="Ade"
+print(type(nama))
+
+#data list
+angka = [1, 2, 3, 4, 5]
+print(type(angka))
+
+# ----------------------------------------------------------------------
+
+# List data belanjaan
+Belanjaan = ["Beras", "Minyak", "Telur"]
+Belanjaan.append("Gula")
+print("Daftar Belanjaan")
+print(Belanjaan)
+
+# Dictionary harga belanjaan
+harga_belanjaan = {
+    "Beras": 12000,
+    "Minyak": 17000,
+    "Telur": 24000,
+    "Gula": 15000,
+    "Kopi": 20000
+}
+
+print("Harga belanjaan saya")
+print(harga_belanjaan)
+
+total = sum(harga_belanjaan.values())
+print("Total belanjaan saya", total)
+
+
+#-----------------------------------------------------------------
+
+# Fungsi untuk menghitung luas dan keliling
+def hitung_persegi_panjang(panjang, lebar):
+    luas = panjang * lebar
+    keliling = 2 * (panjang + lebar)
+    return luas, keliling
+
+# Program utama
+panjang = int(input("Masukkan panjang: "))
+lebar = int(input("Masukkan lebar: "))
+
+luas, keliling = hitung_persegi_panjang(panjang, lebar)
+
+print("Luas persegi panjang =", luas)
+print("Keliling persegi panjang =", keliling)
+
+#-------------------------------------------------------------
+
+# Program klasifikasi usia
+
+try:
+    usia = int(input("Masukkan usia: "))
+
+    if 0 <= usia <= 13:
+        print("Anak")
+    elif 14 <= usia <= 24:
+        print("Remaja")
+    elif 25 <= usia <= 49:
+        print("Dewasa")
+    elif usia >= 50:
+        print("Lansia")
+    else:
+        print("Usia tidak valid")
+except ValueError:
+    print("Input harus berupa angka!")
